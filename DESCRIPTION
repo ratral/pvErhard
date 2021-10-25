@@ -1,0 +1,18 @@
+Package: pvErhard
+Title: ERHARD Plunger/Needle Valves (RKV) Sizing coefficients
+Version: 0.0.1
+Authors@R: 
+    person(given   = "Raúl", 
+           family  = "Trujillo Álvarez",
+           role    = c("aut", "cre"),
+           email   = "dr.ing.trujillo@gmail.com", 
+           comment = c(ORCID    = "0000-0001-9102-9295",
+                       linkedin = "https://www.linkedin.com/in/dr-raul-trujillo/"))
+Description: Sizing coefficients for the RKV valves.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
+LazyData: true
