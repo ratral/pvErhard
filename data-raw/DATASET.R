@@ -9,7 +9,7 @@ pvErhard <- tibble::tribble(
   "DN0200-OP-SR", "One-piece",	"Seat Ring",	       200,	1.30,
   "DN0250-OP-SR", "One-piece",	"Seat Ring",	       250,	1.90,
   "DN0300-OP-SR", "One-piece",	"Seat Ring",	       300,	1.40,
-  "DN0100-OP-SR", "One-piece",	"Vaned Ring",	       100,	1.20,
+  "DN0100-OP-VR", "One-piece",	"Vaned Ring",	       100,	1.20,
   "DN0125-OP-VR", "One-piece",	"Vaned Ring",	       125,	2.90,
   "DN0150-OP-VR", "One-piece",	"Vaned Ring",	       150,	2.40,
   "DN0200-OP-VR", "One-piece",	"Vaned Ring",	       200,	1.60,

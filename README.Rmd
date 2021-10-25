@@ -13,6 +13,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r}
+library(tidyverse)
+library(scales)
+```
+
+
 # pvErhard
 
 <!-- badges: start -->
@@ -28,19 +34,37 @@ You can install the development version of pvErhard like so:
 remotes::install_github("ratral/pvErhard")
 ```
 
-## Example
+## Zeta $\zeta$ and flow coefficient $K_{vs}$ values of the ERHARD RKS Valves at a fully-open valve
 
-This is a basic example which shows you how to solve a common problem:
+The $K_{vs}$ value expresses the amount of flow in a regulating valve at a fully-open valve position and a pressure differential of 1 bar.  The $K_{vs}$ value is a special case of the $K_{vs}$ value, which indicates the flow at a given valve position and a pressure differential of 1 bar. 
 
 ```{r example}
 library(pvErhard)
-summary(pvErhard)
 
 ```
 
-You can also embed plots, for example:
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+
+```{r, echo = FALSE}
+pvErhard %>% 
+  ggplot(aes(x = kvs, y = reorder(id, kvs))) +
+  geom_point(color='red',fill='steelblue') +
+  scale_y_discrete(name="Valve Type") +
+  scale_x_log10(name="Kvs Value (m3/h)") +
+  annotation_logticks(sides="b") + 
+  labs( title = "Flow coefficient ERHARD RKS Valves in (m3/h)") +
+  theme_bw()
 ```
+
+
+```{r, echo = FALSE}
+pvErhard %>% 
+  ggplot(aes(x = zvs, y = reorder(id, zvs))) +
+  geom_point(color='red',fill='steelblue') +
+  scale_y_discrete(name="Valve Type") +
+  scale_x_continuous(name="Zeta Value", limits=c(0, 10), breaks=1:10)+
+  labs( title = "Zeta value ERHARD RKS Valves") +
+  theme_bw()
+```
+
 
