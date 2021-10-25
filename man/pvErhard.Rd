@@ -13,7 +13,7 @@ A Tibble with 39 elements
 \item{typ}{type of control element}
 \item{dn}{Diameter (in mm)}
 \item{zvs}{Zeta Value full open}
-\item{kvs}{Flow coeficient full open (in m3/h)}
+\item{kvs}{calculated Flow coeficient full open (in m3/h)}
 }
 }
 \source{
